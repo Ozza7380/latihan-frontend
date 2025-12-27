@@ -11,11 +11,19 @@
     <form id="registration">
         <div>
             <label>Nama:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" placeholder="Tulis nama Anda disini" required>
         </div>
         <div>
-            <label>Nomor WhatsApp</label>
+            <label>Nomor WhatsApp:</label>
             <input type="text" id="WhatsApp" placeholder="+628xxxxxxxxx" required>
+        </div>
+        <div>
+            <label>Alamat:</label>
+            <textarea id="Alamat" rows="2" cols="50" placeholder="Jl XXXX, Desa XXXXX. RT XX, RW XX, Kelurahan XXXXX, Kecamatan XXXXX, Kabupaten XXXXXX." required></textarea>
+        </div>
+        <div>
+            <label>Pesanan:</label>
+            <textarea id="barang" rows="6" cols="50" placeholder="Tulis pesanan Anda disini" required></textarea>
         </div>
         <button type="submit">Daftar</button>
     </form>
