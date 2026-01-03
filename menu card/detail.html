@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="desc"></p>
+
+    <a href="index.html">Kembali</a>
+    <script>
+        const params = new URLSearchParams(location.search)
+        const id = params.get('id')
+
+        const data = {
+            1: {
+                title: 'program thafidz',
+                desc: 'program fokus hafalan 30 juz'
+            },
+            2: {
+                title: 'program IT',
+                desc: 'belajar web development modern'
+            },
+            3: {
+                title: 'program bahasa',
+                desc: 'bahasa Arab dan Inggris insetif'
+            }
+        }
+
+        if (data[id]) {
+            document.getElementById('title').innerText = data[id].title
+            document.getElementById('desc').innerText = data[id].desc
+        } else {
+            document.body.innerHTML = '<h1> data tidak di temukan</h1>'
+        }
+    </script>
+</body>
+</html>
