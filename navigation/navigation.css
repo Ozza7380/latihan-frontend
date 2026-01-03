@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #222; 
+    display: flex;
+    justify-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: auto;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #444;
+}
+
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
