@@ -1,0 +1,17 @@
+.flex-container {
+    height: 500px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    background-color: rgb(0, 255, 30);
+}
+
+article {
+    text-align: center;
+    background-color: rgba(251, 147, 9, 0.957);
+    padding: 4px;
+    height: 200px;
+    width: 200px;
+}
