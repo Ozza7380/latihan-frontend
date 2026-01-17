@@ -2,8 +2,14 @@
     width: 150;
     height: 100px;
     background: lightcoral;
-    transition: background 0.5s;
+    /* transition: background 0.1s; */
+    transition: 3s;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    font-size: 50px;
 }
 .card:hover {
-    background: purple;
+    background: red; 
+    transform: translateY(-10px);
 }
