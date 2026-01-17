@@ -1,0 +1,13 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    position: relative;
+    bottom: 50px;
+    right: 30px;
+}
+.other {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
