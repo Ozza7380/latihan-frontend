@@ -1,0 +1,9 @@
+.card {
+    width: 150;
+    height: 100px;
+    background: lightcoral;
+    transition: background 0.5s;
+}
+.card:hover {
+    background: purple;
+}
