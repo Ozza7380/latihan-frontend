@@ -3,7 +3,7 @@
     height: 100px;
     background: lightcoral;
     /* transition: background 0.1s; */
-    transition: 3s;
+    transition: all 1s;
     border-radius: 16px;
     padding: 16px;
     text-align: center;
@@ -11,5 +11,6 @@
 }
 .card:hover {
     background: red; 
-    transform: translateY(-10px);
+    transform: translateY(-50px);
+    transform: scale(1.5);
 }

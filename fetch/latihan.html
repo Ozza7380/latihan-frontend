@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Jadwal dzan Sragen</h2>
+    <div id="subuh"></div>
+    <div id="dzuhur"></div>
+    <div id="Ashar"></div>
+    <div id="magrib"></div>
+    <div id="isya"></div>
+    <h2 id="jam">Jam</h2>
+    <script>
+        async function jadwalAdzan() {
+            const response = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=Sragen&country=Indonesia&method=11`)
+            const adzan = await response.json()
+
+            const subuh = document.getElementById(`subuh`)
+            subuh.textContent=`Subuh= ${adzan.data.timings.Fajr} WIB`
+
+            const dzuhur = document.getElementById(`dzuhur`)
+            dzuhur.textContent=`Dzuhur= ${adzan.data.timings.Dhuhr} WIB`
+
+            const ashar = document.getElementById(`Ashar`)
+            ashar.textContent=`Ashar= ${adzan.data.timings.Asr} WIB`
+
+            const maghrib = document.getElementById(`magrib`)
+            maghrib.textContent=`Maghrib= ${adzan.data.timings.Maghrib} WIB`
+
+            const isya = document.getElementById(`isya`)
+            isya.textContent=`Isya= ${adzan.data.timings.Isha} WIB`
+            setInterval(function() {
+                const now = new Date()
+                const jam = document.getElementById(`jam`)
+            jam.textContent = `${now.toDateString()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
+        },1000)
+            
+        }
+        jadwalAdzan()
+    </script>
+</body>
+</html>
